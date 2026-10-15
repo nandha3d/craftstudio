@@ -103,6 +103,14 @@ impl CraftStudioApp {
                         let ans = picked.map(|file| photocraft_ui_egui::FileDialogAnswer::SaveTo(file.to_string_lossy().to_string()));
                         reply.send(ans);
                     }
+                    photocraft_ui_egui::FileDialogRequest::Folder { initial_dir } => {
+                        if let Some(dir) = initial_dir {
+                            dialog = dialog.set_directory(dir);
+                        }
+                        let picked = dialog.pick_folder();
+                        let ans = picked.map(|folder| photocraft_ui_egui::FileDialogAnswer::FolderTo(folder.to_string_lossy().to_string()));
+                        reply.send(ans);
+                    }
                 }
             });
         }));
