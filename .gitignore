@@ -1,0 +1,19 @@
+# Rust build artifacts
+/target
+**/target
+**/*.rs.bk
+
+# Backups and temporary files
+.git_backups/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

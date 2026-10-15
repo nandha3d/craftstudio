@@ -1,0 +1,34 @@
+[workspace]
+resolver = "3"
+members = [
+    "craft-studio",
+]
+exclude = [
+    "Photocraft",
+    "filmcraft",
+    "effectcraft",
+]
+
+[patch."https://github.com/storytold/filmcraft"]
+filmcraft-codecs = { path = "filmcraft/crates/codecs" }
+filmcraft-media = { path = "filmcraft/crates/media" }
+filmcraft-frame = { path = "filmcraft/crates/frame" }
+filmcraft-color = { path = "filmcraft/crates/color" }
+filmcraft-time = { path = "filmcraft/crates/time" }
+filmcraft-h264enc = { path = "filmcraft/crates/h264enc" }
+filmcraft-project = { path = "filmcraft/crates/project" }
+filmcraft-render = { path = "filmcraft/crates/render" }
+filmcraft-interchange = { path = "filmcraft/crates/interchange" }
+filmcraft-aac = { path = "filmcraft/crates/aac" }
+filmcraft-prores = { path = "filmcraft/crates/prores" }
+filmcraft-isobmff = { path = "filmcraft/crates/isobmff" }
+filmcraft-ac3 = { path = "filmcraft/crates/ac3" }
+filmcraft-dnx = { path = "filmcraft/crates/dnx" }
+filmcraft-geom = { path = "filmcraft/crates/geom" }
+filmcraft-vp9 = { path = "filmcraft/crates/vp9" }
+filmcraft-mpeg2v = { path = "filmcraft/crates/mpeg2v" }
+filmcraft-h264 = { path = "filmcraft/crates/h264" }
+filmcraft-mpegts = { path = "filmcraft/crates/mpegts" }
+filmcraft-av1 = { path = "filmcraft/crates/av1" }
+filmcraft-hevc = { path = "filmcraft/crates/hevc" }
+filmcraft-platform = { path = "filmcraft/crates/platform" }

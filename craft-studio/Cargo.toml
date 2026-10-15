@@ -1,0 +1,38 @@
+[package]
+name = "craft-studio"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "CraftStudio: Unified Creative Suite combining PhotoCraft, FilmCraft and EffectCraft in an interconnected workspace"
+
+[dependencies]
+# UI Framework
+egui = "0.36"
+eframe = { version = "0.36", default-features = false, features = ["default_fonts", "wgpu", "accesskit"] }
+
+# Internal Modules
+photocraft-ui-egui = { path = "../Photocraft/crates/ui-egui" }
+photocraft-engine = { path = "../Photocraft/crates/engine" }
+photocraft-io = { path = "../Photocraft/crates/io" }
+photocraft-doc = { path = "../Photocraft/crates/doc" }
+filmcraft-ui-egui = { path = "../filmcraft/crates/ui-egui" }
+filmcraft-engine = { path = "../filmcraft/crates/engine" }
+filmcraft-project = { path = "../filmcraft/crates/project" }
+filmcraft-time = { path = "../filmcraft/crates/time" }
+filmcraft-platform = { path = "../filmcraft/crates/platform" }
+effectcraft-ui-egui = { path = "../effectcraft/crates/ui-egui" }
+effectcraft-engine = { path = "../effectcraft/crates/engine" }
+effectcraft-host = { path = "../effectcraft/crates/host" }
+effectcraft-project = { path = "../effectcraft/crates/project" }
+effectcraft-time = { path = "../effectcraft/crates/time" }
+
+# Utilities
+rfd = "0.17"
+log = "0.4"
+env_logger = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+arboard = "3"
+open = "5"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
